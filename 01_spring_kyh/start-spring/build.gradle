@@ -10,10 +10,10 @@ sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
-} // maven central 이라는 사이트에서 다운로드 받을 수 있다.
+}
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // template engine
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
