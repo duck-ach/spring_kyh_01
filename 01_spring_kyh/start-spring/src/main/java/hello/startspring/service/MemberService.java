@@ -8,10 +8,17 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class MemberService {
+public class MemberService { // command + shift + t 를 누르면 test를 간편하게 생성할 수 있음
 
-    private MemberRepository memberRepository = new MemoryMemberRepository();
+    /**
+     * 아래와 같이 repository에 final과 생성자를 생성해준 이유 :
+     *      Test에서 new 키워드로 인해 repository Test와 다른 객체를 사용하여, 테스트가 제대로 이루어지지 않기 때문
+     */
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
