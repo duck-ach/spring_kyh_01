@@ -1,10 +1,8 @@
 package hello.startspring.service;
 
 import hello.startspring.domain.Member;
-import hello.startspring.repository.MemberRepository;
 import hello.startspring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,17 +18,17 @@ class MemberServiceTest {
      * given when then 문법. (Test 할 때 나누기 좋은 문법)
      */
     MemberService memberService; // 여기는 선언만
-    MemoryMemberRepository repository = new MemoryMemberRepository(); // clear() 가져오기위해 import
+    MemoryMemberRepository memberRepository = new MemoryMemberRepository(); // clear() 가져오기위해 import
 
     @BeforeEach // 각 테스트 실행 전에 호출된다. 테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
     public void beforeEach() {
-        repository = new MemoryMemberRepository(); // repository를 만들고,
-        memberService = new MemberService(repository); // memberService에 넣어줌으로써, 같은 repository를 사용한다. (DI)
+        memberRepository = new MemoryMemberRepository(); // repository를 만들고,
+        memberService = new MemberService(memberRepository); // memberService에 넣어줌으로써, 같은 repository를 사용한다. (DI)
     }
 
     @AfterEach
     public void afterEach() {
-        repository.clearStore();
+        memberRepository.clearStore();
     }
 
     @Test
@@ -79,22 +77,5 @@ class MemberServiceTest {
 
 
     }
-
-    @Test
-    void 모든회원조회() {
-
-        // given
-
-
-        // when
-
-        // then
-
-    }
-
-    @Test
-    void 회원조회() {
-    }
-
 
 }

@@ -2,18 +2,16 @@ package hello.startspring.service;
 
 import hello.startspring.domain.Member;
 import hello.startspring.repository.MemberRepository;
-import hello.startspring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService { // command + shift + t 를 누르면 test를 간편하게 생성할 수 있음
 
     private final MemberRepository memberRepository;
-    @Autowired
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

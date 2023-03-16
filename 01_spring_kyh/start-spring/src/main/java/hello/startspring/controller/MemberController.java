@@ -4,21 +4,24 @@ import hello.startspring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-@Controller // Spring이 객체를 자동으로 생성해서 가지고 있다. (Bean이 관리된다.)
+@Controller
 public class MemberController {
-    private final MemberService memberService;
 
-    // Spring이 관리되게 되면 new로 새로 객체를 생성하기보다 Spring에 올려둔 것을 가져다 쓰면 된다.
+    /** Field Dependency는 변경하기 어려우므로 권장하지 않는다. */
+//    @Autowired private MemberService memberService;
+
+    /** Constructor Dependency를 권장한다.  */
+    private MemberService memberService;
+
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
 
 
-
-
-
-
-
-
+/** Setter Dependency는 public으로 돌려야해서 권장하지 않는다. */
+//    @Autowired
+//    public void setMemberService(MemberService memberService) {
+//        this.memberService = memberService;
+//    }
 }
