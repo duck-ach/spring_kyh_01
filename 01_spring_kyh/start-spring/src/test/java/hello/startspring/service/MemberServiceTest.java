@@ -22,7 +22,7 @@ class MemberServiceTest {
     MemberService memberService; // 여기는 선언만
     MemoryMemberRepository repository = new MemoryMemberRepository(); // clear() 가져오기위해 import
 
-    @BeforeEach
+    @BeforeEach // 각 테스트 실행 전에 호출된다. 테스트가 서로 영향이 없도록 항상 새로운 객체를 생성하고, 의존관계도 새로 맺어준다.
     public void beforeEach() {
         repository = new MemoryMemberRepository(); // repository를 만들고,
         memberService = new MemberService(repository); // memberService에 넣어줌으로써, 같은 repository를 사용한다. (DI)

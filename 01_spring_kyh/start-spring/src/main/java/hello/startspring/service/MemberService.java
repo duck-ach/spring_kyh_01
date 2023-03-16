@@ -3,19 +3,17 @@ package hello.startspring.service;
 import hello.startspring.domain.Member;
 import hello.startspring.repository.MemberRepository;
 import hello.startspring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService { // command + shift + t 를 누르면 test를 간편하게 생성할 수 있음
 
-    /**
-     * 아래와 같이 repository에 final과 생성자를 생성해준 이유 :
-     *      Test에서 new 키워드로 인해 repository Test와 다른 객체를 사용하여, 테스트가 제대로 이루어지지 않기 때문
-     */
     private final MemberRepository memberRepository;
-
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

@@ -2,9 +2,10 @@ package hello.startspring.repository;
 
 
 import hello.startspring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     // memory니까 저장을 해놓을 것을 만들기
