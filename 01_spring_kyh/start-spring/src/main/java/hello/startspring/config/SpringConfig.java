@@ -2,6 +2,7 @@ package hello.startspring.config;
 
 import hello.startspring.controller.MemberController;
 import hello.startspring.repository.JdbcMemberRepository;
+import hello.startspring.repository.JdbcTemplateMemberRepository;
 import hello.startspring.repository.MemberRepository;
 import hello.startspring.repository.MemoryMemberRepository;
 import hello.startspring.service.MemberService;
@@ -28,7 +29,8 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
         // return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        // return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
     // Controller는 Spring 이 관리하는거라서 여기에 따로 등록하지않고 Controller파일에서 하기
