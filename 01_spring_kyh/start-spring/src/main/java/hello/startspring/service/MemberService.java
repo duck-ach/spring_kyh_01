@@ -3,11 +3,13 @@ package hello.startspring.service;
 import hello.startspring.domain.Member;
 import hello.startspring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 
+@Transactional // jpa를 사용하기 위해서는 Transactional을 선언해주어야 한다.
 public class MemberService { // command + shift + t 를 누르면 test를 간편하게 생성할 수 있음
 
     private final MemberRepository memberRepository;
