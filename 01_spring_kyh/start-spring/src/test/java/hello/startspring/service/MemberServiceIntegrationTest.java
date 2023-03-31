@@ -23,7 +23,6 @@ class MemberServiceIntegrationTest {
      */
     @Autowired
     MemberService memberService; // 여기는 선언만
-    @Autowired
     MemberRepository memberRepository;
 
     @Test

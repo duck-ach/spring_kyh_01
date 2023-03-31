@@ -1,38 +1,18 @@
 package hello.startspring.config;
 
-import hello.startspring.controller.MemberController;
-import hello.startspring.repository.*;
+import hello.startspring.repository.MemberRepository;
 import hello.startspring.service.MemberService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.sql.DataSource;
-
 @Configuration
 public class SpringConfig {
-
-    private final DataSource dataSource;
-    private final EntityManager em;
-    public SpringConfig(DataSource dataSource, EntityManager em) {
-        this.dataSource = dataSource;
-        this.em = em;
+    private final MemberRepository memberRepository;
+    public SpringConfig(@Qualifier("springDataJpaMemberRepository") MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
     }
-
     @Bean
     public MemberService memberService() {
-        return new MemberService(memberRepository());
+        return new MemberService(memberRepository);
     }
-    @Bean
-    public MemberRepository memberRepository() {
-        // return new MemoryMemberRepository();
-        // return new JdbcMemberRepository(dataSource);
-        // return new JdbcTemplateMemberRepository(dataSource);
-        return new JpaMemberRepository(em);
-    }
-
-    // Controller는 Spring 이 관리하는거라서 여기에 따로 등록하지않고 Controller파일에서 하기
-
 }
