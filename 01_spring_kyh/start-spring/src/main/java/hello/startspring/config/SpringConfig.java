@@ -1,5 +1,6 @@
 package hello.startspring.config;
 
+import hello.startspring.aop.TimeTraceAop;
 import hello.startspring.repository.MemberRepository;
 import hello.startspring.service.MemberService;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,5 +15,10 @@ public class SpringConfig {
     @Bean
     public MemberService memberService() {
         return new MemberService(memberRepository);
+    }
+
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
     }
 }

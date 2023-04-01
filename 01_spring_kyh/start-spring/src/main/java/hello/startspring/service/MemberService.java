@@ -2,7 +2,6 @@ package hello.startspring.service;
 
 import hello.startspring.domain.Member;
 import hello.startspring.repository.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -41,10 +40,23 @@ public class MemberService { // command + shift + t 를 누르면 test를 간편
     */
 
         // 3
-        validateDuplicateMember(member);
+/*        validateDuplicateMember(member);
 
         memberRepository.save(member);
-        return member.getId();
+        return member.getId();*/
+
+        long start = System.currentTimeMillis();
+
+        try {
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("timeMs = " + timeMs + "ms");
+        }
+
     }
 
     private void validateDuplicateMember(Member member) {
