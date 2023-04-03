@@ -40,22 +40,9 @@ public class MemberService { // command + shift + t 를 누르면 test를 간편
     */
 
         // 3
-/*        validateDuplicateMember(member);
-
+        validateDuplicateMember(member);
         memberRepository.save(member);
-        return member.getId();*/
-
-        long start = System.currentTimeMillis();
-
-        try {
-            validateDuplicateMember(member);
-            memberRepository.save(member);
-            return member.getId();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println("timeMs = " + timeMs + "ms");
-        }
+        return member.getId();
 
     }
 
