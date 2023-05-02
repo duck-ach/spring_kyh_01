@@ -14,21 +14,29 @@ import org.springframework.context.annotation.Configuration;
  * AppConfig는 애플리케이션의 실제 동작에 필요한 구현 객체를 생성한다.
  * AppConfig는 생성한 객체 인스턴스의 참조(레퍼런스)를 생성자를 통해서 주입(연결) 해준다.
  */
+
+/**
+ * @Bean memberService -> new MemoryMemberRepository()
+ * @Bean orderService -> new MemoryMemberRepository()
+ */
 @Configuration
 public class AppConfig { /* command + option + m 을 사용하여 AppConfig Refactoring */
 
     @Bean
     public MemberService memberService() { // MemoryMemberRepository를 Autowired 한것과 같음 의존성 주입
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
-    public static MemoryMemberRepository memberRepository() {
+    public MemoryMemberRepository memberRepository() {
+        System.out.println("call AppConfig.MemoryMemberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
