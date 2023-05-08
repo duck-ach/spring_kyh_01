@@ -14,7 +14,7 @@ import org.springframework.context.annotation.FilterType;
         // 해당 클래스가 포함된 패키지의 경로(package hello.core)부터 찾는다.
         // basePackageClasses = AutoAppConfig.class,
 
-        // 만약 위의 base들을 설정하지 않으면 @ComponentScan이 붙은 설정 정보의 클래스의 패키지가 시작 위치가 된다.
+        // 만약 위의 base들을 설정하지 않으면 @ComponentScan 이 붙은 설정 정보의 클래스의 패키지가 시작 위치가 된다.
 
         // AppConfig가 자동으로 등록되지 않도록 (충돌방지)
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
