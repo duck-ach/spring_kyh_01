@@ -11,6 +11,14 @@ public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+
+    /**
+     * @Autowired
+     *
+     * 생성자가 딱 1개일때는 @Autowired를 생략해도 된다. (자동주입)
+     *
+     */
+
     @Autowired // 생성자 위에
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
