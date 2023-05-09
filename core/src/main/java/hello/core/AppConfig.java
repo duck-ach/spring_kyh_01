@@ -29,7 +29,7 @@ public class AppConfig { /* command + option + m 을 사용하여 AppConfig Refa
     }
 
     @Bean
-    public MemoryMemberRepository memberRepository() {
+    public static MemoryMemberRepository memberRepository() {
         System.out.println("call AppConfig.MemoryMemberRepository");
         return new MemoryMemberRepository();
     }

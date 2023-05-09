@@ -9,8 +9,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+
+    /**
+     * 수정자 타입
+     */
+    @Autowired
+    public void setMemberRepository(MemberRepository memberRepository) {
+        System.out.println("memberRepository = " + memberRepository);
+        this.memberRepository = memberRepository;
+    }
+
+    @Autowired
+    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+        System.out.println("discountPolicy = " + discountPolicy);
+        this.discountPolicy = discountPolicy;
+    }
 
     /**
      * @Autowired
