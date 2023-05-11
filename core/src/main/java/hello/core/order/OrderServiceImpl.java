@@ -15,7 +15,8 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 수정자 타입
      */
-    @Autowired
+    // @Autowired 의 기본 동작은 주입할 대상이 없으면 오류가 발생한다. 주입할 대상이 없어도 동작하게 하려면 required = false 로 지정하면 된다.
+    @Autowired(required = false)
     public void setMemberRepository(MemberRepository memberRepository) {
         System.out.println("memberRepository = " + memberRepository);
         this.memberRepository = memberRepository;
@@ -36,6 +37,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired // 생성자 위에
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        System.out.println("1. OrderServiceImpl.OrderServiceImpl");
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
