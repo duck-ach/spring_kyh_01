@@ -1,7 +1,11 @@
 package hello.core;
 
+import hello.core.discount.DiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import hello.core.order.OrderService;
+import hello.core.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +33,11 @@ import org.springframework.context.annotation.FilterType;
  * 기존 예제 코드를 최대한 남기고 유지하기 위해서 이 방법을 선택했다.
  */
 public class AutoAppConfig {
+
+    @Bean
+    OrderService orderService() {
+        return new OrderServiceImpl();
+    }
 
     @Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository() {

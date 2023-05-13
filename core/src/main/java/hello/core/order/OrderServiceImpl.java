@@ -9,8 +9,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService {
 
+    /**
+     * Field 주입
+     * @Autowired private MemberRepository memberRepository;
+     * @Autowired private DiscountPolicy discountPolicy;
+     *
+     * 코드는 간결하지만 외부에서 변경이 불가능해서 테스트하기 힘들어서 옛날엔 많이 사용했지만
+     * 최근에는 권장하지 않음
+     */
+
     private MemberRepository memberRepository;
     private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+
+    @Autowired
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
 
     /**
      * 수정자 타입
