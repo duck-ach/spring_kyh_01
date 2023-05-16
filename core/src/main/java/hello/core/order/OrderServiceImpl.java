@@ -21,6 +21,10 @@ public class OrderServiceImpl implements OrderService {
     private MemberRepository memberRepository;
     private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
 
+    public OrderServiceImpl() {
+
+    }
+
     @Autowired
     public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
