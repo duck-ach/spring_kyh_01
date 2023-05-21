@@ -23,8 +23,8 @@ public class OrderServiceImpl implements OrderService {
     *  생성자에서 혹시라도 값이 설정되지 않는 오류를 컴파일 시점에서 막아준다.
     * */
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
 
     /**
      * 수정자 주입
