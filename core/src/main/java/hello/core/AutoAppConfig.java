@@ -36,7 +36,7 @@ public class AutoAppConfig {
 
     @Bean
     OrderService orderService() {
-        return new OrderServiceImpl();
+        return new OrderServiceImpl(MemberRepository, DiscountPolicy);
     }
 
     /*

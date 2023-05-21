@@ -6,7 +6,7 @@ import hello.core.member.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component // ComponentScan의 대상
 public class OrderServiceImpl implements OrderService {
 
     /**
@@ -20,10 +20,6 @@ public class OrderServiceImpl implements OrderService {
 
     private MemberRepository memberRepository;
     private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
-
-    public OrderServiceImpl() {
-
-    }
 
     @Autowired
     public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
