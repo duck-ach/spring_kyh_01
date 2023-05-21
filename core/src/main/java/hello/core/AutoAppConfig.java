@@ -34,16 +34,9 @@ import org.springframework.context.annotation.FilterType;
  */
 public class AutoAppConfig {
 
-    @Bean
-    OrderService orderService() {
-        return new OrderServiceImpl(MemberRepository, DiscountPolicy);
-    }
-
-    /*
-    @Bean(name = "memoryMemberRepository")
-    MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
-    */
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 
 }

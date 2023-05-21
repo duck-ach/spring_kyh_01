@@ -38,6 +38,7 @@ public class AppConfig { /* command + option + m 을 사용하여 AppConfig Refa
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+        //return null;
     }
 
     @Bean

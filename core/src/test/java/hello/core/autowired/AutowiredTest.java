@@ -13,25 +13,25 @@ public class AutowiredTest {
 
     @Test
     void AutowiredOption() {
-        ApplicationContext ac = new AnnotationConfigApplicationContext(TestBean.class);// spring bean 등록
+        ApplicationContext ac = new AnnotationConfigApplicationContext(TestBean.class);
     }
 
     static class TestBean {
 
         @Autowired(required = false)
-        public void setNoBean1(Member noBean1) { // spring bean이 관리하지 않는 Member를 주입
+        public void setNoBean1(Member noBean1) {
             System.out.println("noBean1 = " + noBean1);
         }
-
         @Autowired
         public void setNoBean2(@Nullable Member noBean2) {
             System.out.println("noBean2 = " + noBean2);
         }
 
         @Autowired
-        public void setNobean3(Optional<Member> noBean3) {
+        public void setNoBean3(Optional<Member> noBean3) {
             System.out.println("noBean3 = " + noBean3);
         }
+
     }
 
 }

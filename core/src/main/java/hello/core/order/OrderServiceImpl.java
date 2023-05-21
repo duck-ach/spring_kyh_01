@@ -18,31 +18,26 @@ public class OrderServiceImpl implements OrderService {
      * 최근에는 권장하지 않음
      */
 
-    private MemberRepository memberRepository;
-    private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+    /* final 키워드
+    *  생성자 주입을 사용하면 final 키워드를 사용할 수 있는데,
+    *  생성자에서 혹시라도 값이 설정되지 않는 오류를 컴파일 시점에서 막아준다.
+    * */
 
-    @Autowired
-    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
-
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
 
     /**
-     * 수정자 타입
+     * 수정자 주입
      */
-    // @Autowired 의 기본 동작은 주입할 대상이 없으면 오류가 발생한다. 주입할 대상이 없어도 동작하게 하려면 required = false 로 지정하면 된다.
-    @Autowired(required = false)
-    public void setMemberRepository(MemberRepository memberRepository) {
-        System.out.println("memberRepository = " + memberRepository);
-        this.memberRepository = memberRepository;
-    }
-
-    @Autowired
-    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
-        System.out.println("discountPolicy = " + discountPolicy);
-        this.discountPolicy = discountPolicy;
-    }
+//    @Autowired
+//    public void setMemberRepository(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+//    @Autowired
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+//        this.discountPolicy = discountPolicy;
+//    }
+//
 
     /**
      * @Autowired
@@ -51,12 +46,24 @@ public class OrderServiceImpl implements OrderService {
      *
      */
 
-    @Autowired // 생성자 위에
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         System.out.println("1. OrderServiceImpl.OrderServiceImpl");
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
+
+    /**
+     * 일반 메서드 주입
+     * 일반적으로 잘 사용하지 않는다.
+     */
+    @Autowired
+    public void init(MemberRepository memberRepository, DiscountPolicy
+            discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
 
     @Override // 주문 요청이 오면
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
