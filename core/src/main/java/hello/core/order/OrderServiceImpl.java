@@ -3,9 +3,11 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+@RequiredArgsConstructor // final이 붙은 필드를 모아서 생성자를 자동으로 만들어준다.
 @Component // ComponentScan의 대상
 public class OrderServiceImpl implements OrderService {
 
@@ -23,8 +25,8 @@ public class OrderServiceImpl implements OrderService {
     *  생성자에서 혹시라도 값이 설정되지 않는 오류를 컴파일 시점에서 막아준다.
     * */
 
-    private MemberRepository memberRepository;
-    private DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy; // 이렇게만 하면 NullPointerExceptions
 
     /**
      * 수정자 주입
@@ -46,23 +48,25 @@ public class OrderServiceImpl implements OrderService {
      *
      */
 
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        System.out.println("1. OrderServiceImpl.OrderServiceImpl");
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+    /**
+     * 아래는 @RequiredArgsConstructor 롬복 라이브러리의 Annotation과 같은 역할을 한다.
+     */
+//    @Autowired
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
     /**
      * 일반 메서드 주입
      * 일반적으로 잘 사용하지 않는다.
      */
-    @Autowired
-    public void init(MemberRepository memberRepository, DiscountPolicy
-            discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    @Autowired
+//    public void init(MemberRepository memberRepository, DiscountPolicy
+//            discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
 
     @Override // 주문 요청이 오면
