@@ -1,7 +1,6 @@
 package com.kyh.heera.order;
 
 import com.kyh.heera.discount.DiscountPolicy;
-import com.kyh.heera.discount.FixDiscountPolicy;
 import com.kyh.heera.member.Member;
 import com.kyh.heera.member.MemberRepository;
 import com.kyh.heera.member.MemoryMemberRepository;
@@ -9,7 +8,12 @@ import com.kyh.heera.member.MemoryMemberRepository;
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+
+    // 할인정책
+//    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+//    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
+
+    private DiscountPolicy discountPolicy;
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
