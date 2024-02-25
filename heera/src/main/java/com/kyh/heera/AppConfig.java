@@ -2,6 +2,7 @@ package com.kyh.heera;
 
 import com.kyh.heera.discount.DiscountPolicy;
 import com.kyh.heera.discount.FixDiscountPolicy;
+import com.kyh.heera.discount.RateDiscountPolicy;
 import com.kyh.heera.member.MemberRepository;
 import com.kyh.heera.member.MemberService;
 import com.kyh.heera.member.MemberServiceImpl;
@@ -34,7 +35,8 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 }
