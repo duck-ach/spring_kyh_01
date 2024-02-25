@@ -3,17 +3,24 @@ package com.kyh.heera.order;
 import com.kyh.heera.discount.DiscountPolicy;
 import com.kyh.heera.member.Member;
 import com.kyh.heera.member.MemberRepository;
-import com.kyh.heera.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    /**
+     * final을 붙여주면 반드시 생성자를 통해 할당해주어야 한다.
+     */
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     // 할인정책
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
 
-    private DiscountPolicy discountPolicy;
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {

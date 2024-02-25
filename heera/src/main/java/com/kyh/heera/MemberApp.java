@@ -8,7 +8,11 @@ import com.kyh.heera.member.MemberServiceImpl;
 public class MemberApp {
     // psvm 치면 main 메소드 생성 가능
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+//        MemberService memberService = new MemberServiceImpl(memberRepository);
+
         // command + alt + v 
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
@@ -17,7 +21,7 @@ public class MemberApp {
 
         // soutv
         System.out.println("findMember = " + findMember.getName());
-        System.out.println("member = " + member);
+        System.out.println("member = " + member.toString());
 
     }
 }
