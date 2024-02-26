@@ -39,6 +39,8 @@ public class AppConfig {
      *
      * 이전에는 개발자가 필요한 객체를 AppConfig를 사용하여 직접 조회했지만, 이제부터는 스프링 컨테이너를 통해서 필요한 스프링 빈(객체)를 찾는다.
      * 스프링 빈은 applicationContext.getBean() 메서드를 사용해서 찾을 수 있다.
+     *
+     * Bean의 이름은 중복되면 안된다. 상황에 따라 다른데 다양한 오류가 발생한다.
      */
 
     @Bean

@@ -11,6 +11,7 @@ public class MemberApp {
     public static void main(String[] args) {
 
         /**
+         * ApplicationContext는 스프링 컨테이너 인터페이스이다. (다형성)
          * AppConfig에 있는 환경설정 정보를 가지고 스프링 BEAN에 집어넣어서 관리해 줌
          */
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
