@@ -37,7 +37,6 @@ public class SingletonService {
 
     }
 
-    //
     public void logic() {
         System.out.println("singleton 객체 로직 호출");
     }
