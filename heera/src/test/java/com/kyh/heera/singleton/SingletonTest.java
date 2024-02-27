@@ -34,4 +34,27 @@ public class SingletonTest {
 
     }
 
+    @Test
+    @DisplayName("singleton 패턴을 적용한 객체 사용")
+    void singletonServiceTest() {
+        SingletonService singletonService1 = SingletonService.getInstance();
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        System.out.println("singletonService1 = " + singletonService1);
+        System.out.println("singletonService2 = " + singletonService2);
+
+        /**
+         * [Result]
+         * singletonService1 = com.kyh.heera.singleton.SingletonService@79079097
+         * singletonService2 = com.kyh.heera.singleton.SingletonService@79079097
+         */
+
+        Assertions.assertThat(singletonService1).isSameAs(singletonService2);
+
+        /*
+            Same : ==
+            equal: .equal()
+         */
+    }
+
 }
