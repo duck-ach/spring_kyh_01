@@ -2,7 +2,9 @@ package com.kyh.heera.discount;
 
 import com.kyh.heera.member.Grade;
 import com.kyh.heera.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

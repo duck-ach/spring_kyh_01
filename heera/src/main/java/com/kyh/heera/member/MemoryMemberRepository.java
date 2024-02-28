@@ -1,8 +1,11 @@
 package com.kyh.heera.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class MemoryMemberRepository implements MemberRepository {
 
     // option + enter 선택 후 메서드 구현
