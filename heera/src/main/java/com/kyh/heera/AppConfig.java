@@ -43,18 +43,28 @@ public class AppConfig {
      * Bean의 이름은 중복되면 안된다. 상황에 따라 다른데
      */
 
+    // @Bean memberService -> new MemoryMemberRepository()
+    // @Bean orderService -> new MemoryMemberRepository()
+
+    /**
+     * new new 각각 2개의 MemoryMemberRepository()가 생성되어 싱글톤이 깨지는 것처럼 보인다.
+     *
+     */
     @Bean
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
