@@ -39,4 +39,26 @@ public class ConfigurationSingletonTest {
         assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
     }
 
+    @Test
+    void configurationDeep() {
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+        /**
+         * [result]
+         * call AppConfig.memberService
+         * call AppConfig.memberRepository
+         * call AppConfig.orderService
+         * bean = class com.kyh.heera.AppConfig$$SpringCGLIB$$0
+         * (스프링이 CGLIB 라는 바이트코드 조작 라이브러리를 사용해서 AppConfig 클래스를 상속받은 임의의 다른 클래스를 만들고
+         * 그 다른 클래스를 스프링 빈으로 등록한 것이다.)
+         *
+         * @Configuration
+         * @Bean 이 붙은 메서드마다 이미 스프링 빈이 존재하면 존재하는 빈을 반환하고,
+         * 스프링 빈이 없으면 생성해서 스프링 빈으로 등록하고 반환하는 코드가 동적으로 만들어진다.
+         * 덕분에 싱글톤이 보장된다.
+         */
+    }
+
 }
