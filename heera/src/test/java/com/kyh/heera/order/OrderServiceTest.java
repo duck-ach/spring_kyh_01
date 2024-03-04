@@ -1,13 +1,14 @@
 package com.kyh.heera.order;
 
 import com.kyh.heera.AppConfig;
-import com.kyh.heera.member.Grade;
-import com.kyh.heera.member.Member;
-import com.kyh.heera.member.MemberService;
-import com.kyh.heera.member.MemberServiceImpl;
+import com.kyh.heera.discount.RateDiscountPolicy;
+import com.kyh.heera.member.*;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OrderServiceTest {
 
@@ -32,4 +33,5 @@ public class OrderServiceTest {
 
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
+
 }

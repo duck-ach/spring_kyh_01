@@ -1,5 +1,8 @@
 package com.kyh.heera;
 
+import com.kyh.heera.member.MemberRepository;
+import com.kyh.heera.member.MemoryMemberRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -32,6 +35,10 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-
+//    Bean 자동등록 수동등록으로 인한 overriding=ture 충돌남
+//    @Bean(name = "memoryMemberRepository")
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 
 }
