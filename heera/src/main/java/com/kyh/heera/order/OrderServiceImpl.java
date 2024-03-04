@@ -3,10 +3,23 @@ package com.kyh.heera.order;
 import com.kyh.heera.discount.DiscountPolicy;
 import com.kyh.heera.member.Member;
 import com.kyh.heera.member.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
+/**
+ *  @RequiredArgsConstructor
+ *     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+ *         this.memberRepository = memberRepository;
+ *         this.discountPolicy = discountPolicy;
+ *     }
+ *
+ *  @RequiredArgsConstructor :
+ *  초기화 되지 않은 final 필드와 @NonNull 어노테이션이 붙은 필드에 대한 생성자 생성
+ *  @AllArgsConstructor :
+ *  모든 필드에 대한 생성자 생성.
+ */
 public class OrderServiceImpl implements OrderService {
 
     /**
@@ -27,11 +40,7 @@ public class OrderServiceImpl implements OrderService {
     /**
      * 생성자 주입
      */
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+
 
     // 할인정책
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
