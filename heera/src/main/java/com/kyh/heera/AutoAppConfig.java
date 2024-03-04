@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
+import org.springframework.stereotype.Component;
 
 /**
  * [권장]
@@ -24,11 +25,11 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(
         // basePackages 패키지부터 하위 패키지로 찾아내려간다. (ComponentScan 대상)
         // basePackages = {"com.kyh.heera.member", "com.kyh.heera.order"} 이렇게 여러 시작 위치도 지정할 수 있다.
-        basePackages = "com.kyh.heera.member",
+//        basePackages = "com.kyh.heera",
 
         // AutoAppConfig 의 패키지(package com.kyh.heera;) 부터 컴포넌트 스캔한다.
         // Default : com.kyh.heera 여기부터 다 뒤적거린다.(프로젝트 최상단) - 권장
-        basePackageClasses = AutoAppConfig.class,
+//        basePackageClasses = AutoAppConfig.class,
 
         // AppConfig, TestConfig 등의 Configuration 을 제외하기 위해 필터 적용(보통은 잘 제외하지 않음, 기존예제코드 유지위함)
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)

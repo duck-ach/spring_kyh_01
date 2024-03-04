@@ -48,7 +48,6 @@ public class AppConfig {
 
     /**
      * new new 각각 2개의 MemoryMemberRepository()가 생성되어 싱글톤이 깨지는 것처럼 보인다.
-     *
      */
     @Bean
     public MemberService memberService() {

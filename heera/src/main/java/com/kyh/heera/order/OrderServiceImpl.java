@@ -13,8 +13,8 @@ public class OrderServiceImpl implements OrderService {
      * final을 붙여주면 반드시 생성자를 통해 값을 할당해주어야 한다. (Null 허용 X)
      */
 
-    @Autowired private MemberRepository memberRepository;
-    @Autowired private DiscountPolicy discountPolicy;
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy;
 
     /**
      * Setter(수정자) 의존관계 주입
