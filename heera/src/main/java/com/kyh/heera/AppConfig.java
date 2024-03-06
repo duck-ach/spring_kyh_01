@@ -1,7 +1,6 @@
 package com.kyh.heera;
 
 import com.kyh.heera.discount.DiscountPolicy;
-import com.kyh.heera.discount.FixDiscountPolicy;
 import com.kyh.heera.discount.RateDiscountPolicy;
 import com.kyh.heera.member.MemberRepository;
 import com.kyh.heera.member.MemberService;
@@ -64,8 +63,8 @@ public class AppConfig {
     @Bean
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
-//        return new OrderServiceImpl(memberRepository(), discountPolicy());
-        return null;
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null;
     }
 
     @Bean

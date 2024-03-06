@@ -2,9 +2,13 @@ package com.kyh.heera.discount;
 
 import com.kyh.heera.member.Grade;
 import com.kyh.heera.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Qualifier("mainDiscountPolicy")
+@Primary // discountPolicy 에서 여러개의 Bean 이 조회되더라도 우선 순위 적용
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
