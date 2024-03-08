@@ -1,5 +1,6 @@
 package com.kyh.heera.order;
 
+import com.kyh.heera.annotation.MainDiscountPolicy;
 import com.kyh.heera.discount.DiscountPolicy;
 import com.kyh.heera.member.Member;
 import com.kyh.heera.member.MemberRepository;
@@ -42,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
      * 보통 선택적이거나 변경 가능성이 있을 경우 사용한다.
      */
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
