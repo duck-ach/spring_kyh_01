@@ -4,7 +4,7 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 /**
- * InitializingBean, DisposableBean
+ * 1. InitializingBean, DisposableBean
  * - 결론적으로 이 두 인터페이스는 오래되기도 했고 잘 사용하지 않는다. (더 좋은 방법들이 많음)
  *
  * [InitializingBean]
@@ -18,7 +18,24 @@ import org.springframework.beans.factory.InitializingBean;
  *  - 초기화, 소멸 메서드의 이름을 변경할 수 없다.
  *  - 내가 코드를 고칠 수없는 외부 라이브러리에 적용할 수 없다.
  */
-public class NetworkClient implements InitializingBean, DisposableBean {
+
+/**
+ * 2. init, close 메소드
+ * @Bean (initMethod = "init", destroyMethod = "close")
+ * - 메서드 이름을 자유롭게 줄 수 있다.
+ * - 스프링 빈이 스프링 코드에 의존하지 않는다.
+ * - 코드가 아니라 설정 정보를 사용하기 때문에 코드를 고칠 수 없는 외부 라이브러리에도 적용할 수 있다.
+ *
+ * [destroyMethod 속성의 특별한 기능]
+ *  - 라이브러리는 대부분 close, shutdown 과 같은 이름의 종료 메서드를 사용한다.
+ *  - @Bean의 destroyMethod는 기본값이 (inferred) '추론' 으로 되어있다.
+ *  - 이 추론 기능은 close, shutdown 라는 이름의 메서드를 자동으로 호출해준다.
+ *  따라서, 직접 스프링 빈으로 등록하면 종료 메서드는 따로 적어주지 않아도 잘 동작한다.
+ *
+ * [initMethod Default = ""]
+ * [destroyMethod Default = "(inferred)"]
+ */
+public class NetworkClient {
 
     /**
      * Spring Bean은 객체를 생성하고, 의존관계가 다 주입이 되어야 데이터를 사용할 수 있는 준비가 완료된다.
@@ -68,14 +85,14 @@ public class NetworkClient implements InitializingBean, DisposableBean {
         System.out.println("close: " + url);
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception { // 의존관계 주입이 끝나면 호출해주겠다.
+    public void init() throws Exception { // 의존관계 주입이 끝나면 호출해주겠다.
+        System.out.println("NetworkClient init");
         connect();
         call("초기화 연결 메시지");
     }
 
-    @Override
-    public void destroy() throws Exception { // disconnect 호출해준다.
+    public void close() throws Exception { // disconnect 호출해준다.
+        System.out.println("NetworkClient close");
         disconnect();
     }
 }
