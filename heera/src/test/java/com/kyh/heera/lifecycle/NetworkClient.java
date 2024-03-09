@@ -1,7 +1,15 @@
 package com.kyh.heera.lifecycle;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+
+/**
+ * [정리]
+ * - @PostConstruct, @PreDestroy 를 사용하자.
+ * - 코드를 고칠 수 없는 외부 라이브러리를 초기화/종료 해야한다면 @Bean 의 initMethod, DestroyMethod를 사용하자.
+ */
 
 /**
  * 1. InitializingBean, DisposableBean
@@ -34,6 +42,17 @@ import org.springframework.beans.factory.InitializingBean;
  *
  * [initMethod Default = ""]
  * [destroyMethod Default = "(inferred)"]
+ */
+
+/**
+ * 3. @PostConstruct, @PreDestroy
+ * 결론적으로 이 방법을 사용하면 된다!!!
+ *  - 최근 스프링에서 가장 권장하는 방법이다.
+ *  - Annotation 하나만 붙이면 되므로 매우 편리하다.
+ *  - 패키지가 'javax.annotation.PostConstruct' 이기 때문에 스프링에 종솢겅니 기술이 아니고 자바 표준이다.
+ *  - ComponentScan 과 잘 어울린다.(Bean 등록하는 게 아니니까)
+ *  - 유일한 단점 : 외부 라이브러리에는 적용하지 못한다는 것. 외부 라이브러리를 종료하거나 초기화 해야한다면 2번을 사용하자.
+ *
  */
 public class NetworkClient {
 
@@ -85,12 +104,14 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    @PostConstruct
     public void init() throws Exception { // 의존관계 주입이 끝나면 호출해주겠다.
         System.out.println("NetworkClient init");
         connect();
         call("초기화 연결 메시지");
     }
 
+    @PreDestroy
     public void close() throws Exception { // disconnect 호출해준다.
         System.out.println("NetworkClient close");
         disconnect();
