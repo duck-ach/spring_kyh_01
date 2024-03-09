@@ -4,7 +4,6 @@ import com.kyh.heera.AutoAppConfig;
 import com.kyh.heera.discount.DiscountPolicy;
 import com.kyh.heera.member.Grade;
 import com.kyh.heera.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
