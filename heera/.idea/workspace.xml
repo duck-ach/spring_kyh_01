@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2bdb1e9-379f-4a93-b59c-30d4685b647c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/AutoAppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/HeeraApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/HelloLombok.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/MemberApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/annotation/MainDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/common/MyLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/discount/DiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/discount/FixDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/discount/RateDiscountPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/Grade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/MemberServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/member/MemoryMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/order/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/order/OrderApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/order/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/order/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/web/LogDemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kyh/heera/web/LogDemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/appConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/HeeraApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/autowired/AllBeanTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/autowired/AutowiredTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/beandefinition/BeanDefinitionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/beanfind/ApplicationContextBasicFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/beanfind/ApplicationContextExtendsFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/beanfind/ApplicationContextInfoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/beanfind/ApplicationContextSameBeanFindTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/discount/RateDiscountPolicyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/lifecycle/BeanLifeCycleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/lifecycle/NetworkClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/member/MemberServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/order/OrderServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/order/OrderServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/AutoAppConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/filter/BeanA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/filter/BeanB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/filter/ComponentFilterAppConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/filter/MyExcludeComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scan/filter/MyIncludeComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scope/PrototypeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scope/SingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/scope/SingletonWithPrototypeTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/singleton/ConfigurationSingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/singleton/SingletonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/singleton/SingletonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/singleton/StatefulService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/singleton/StatefulServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/kyh/heera/xml/XmlAppContext.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="heera" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="heera" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="heera" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="heera" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="org.springframework.boot:spring-boot-starter:3.2.2" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2cPDvbFfCdTaQkCEmTtXffrtAwO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AllBeanTest.findAllBean.executor": "Run",
+    "JUnit.ApplicationContextBasicFindTest.executor": "Run",
+    "JUnit.ApplicationContextBasicFindTest.findBeanByName.executor": "Run",
+    "JUnit.ApplicationContextExtendsFindTest.executor": "Run",
+    "JUnit.ApplicationContextInfoTest.findAllBean.executor": "Run",
+    "JUnit.ApplicationContextInfoTest.findApplicationBean.executor": "Run",
+    "JUnit.AutoAppConfigTest.basicScan.executor": "Run",
+    "JUnit.AutoAppConfigTest.executor": "Run",
+    "JUnit.AutowiredTest (1).executor": "Run",
+    "JUnit.AutowiredTest (2).executor": "Run",
+    "JUnit.AutowiredTest (3).executor": "Run",
+    "JUnit.AutowiredTest.executor": "Run",
+    "JUnit.BeanDefinitionTest.findApplicationBean.executor": "Run",
+    "JUnit.BeanLifeCycleTest.lifeCycleTest.executor": "Run",
+    "JUnit.HeeraApplicationTests.executor": "Run",
+    "JUnit.OrderServiceImplTest.createOrder.executor": "Run",
+    "JUnit.OrderServiceTest.createOrder.executor": "Run",
+    "JUnit.OrderServiceTest.executor": "Run",
+    "JUnit.OrderServiceTest.fieldInjectionTest.executor": "Run",
+    "JUnit.PrototypeTest.prototypeBeanFind.executor": "Run",
+    "JUnit.SingletonTest.singletonBeanFind.executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1 (1).executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1 (2).executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1.executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1.prototypeFind.executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1.singletonClientUsePrototype.executor": "Run",
+    "JUnit.SingletonWithPrototypeTest1.singletonClinetUsePrototype.executor": "Run",
+    "JUnit.heera.test의 com.kyh.heera.order.executor": "Run",
+    "JUnit.heera.test의 전부 (1).executor": "Run",
+    "JUnit.heera.test의 전부 (2).executor": "Run",
+    "JUnit.heera.test의 전부 (3).executor": "Run",
+    "JUnit.heera.test의 전부 (4).executor": "Run",
+    "JUnit.heera.test의 전부 (5).executor": "Run",
+    "JUnit.heera.test의 전부.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.HeeraApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/Duck_ach/Desktop/Coding/spring_kyh_01/heera",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.HelloLombok.executor": "Run"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kyh.heera.web" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kyh.heera.order" />
+      <recent name="com.kyh.heera.singleton" />
+      <recent name="com.kyh.heera.discount" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kyh.heera.scan.filter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HeeraApplication">
+    <configuration name="SingletonWithPrototypeTest1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heera.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyh.heera.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyh.heera.scope" />
+      <option name="MAIN_CLASS_NAME" value="com.kyh.heera.scope.SingletonWithPrototypeTest1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonWithPrototypeTest1 (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heera.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyh.heera.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyh.heera.scope" />
+      <option name="MAIN_CLASS_NAME" value="com.kyh.heera.scope.SingletonWithPrototypeTest1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonWithPrototypeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heera.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyh.heera.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyh.heera.scope" />
+      <option name="MAIN_CLASS_NAME" value="com.kyh.heera.scope.SingletonWithPrototypeTest1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonWithPrototypeTest1.singletonClientUsePrototype" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heera.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyh.heera.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyh.heera.scope" />
+      <option name="MAIN_CLASS_NAME" value="com.kyh.heera.scope.SingletonWithPrototypeTest1" />
+      <option name="METHOD_NAME" value="singletonClientUsePrototype" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingletonWithPrototypeTest1.singletonClinetUsePrototype" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heera.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kyh.heera.scope.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kyh.heera.scope" />
+      <option name="MAIN_CLASS_NAME" value="com.kyh.heera.scope.SingletonWithPrototypeTest1" />
+      <option name="METHOD_NAME" value="singletonClinetUsePrototype" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeeraApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="heera.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kyh.heera.HeeraApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SingletonWithPrototypeTest1 (2)" />
+        <item itemvalue="JUnit.SingletonWithPrototypeTest1.singletonClientUsePrototype" />
+        <item itemvalue="JUnit.SingletonWithPrototypeTest1 (1)" />
+        <item itemvalue="JUnit.SingletonWithPrototypeTest1" />
+        <item itemvalue="JUnit.SingletonWithPrototypeTest1.singletonClinetUsePrototype" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-jbr-17.0.9-4caba194b151-f5d63804" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="c2bdb1e9-379f-4a93-b59c-30d4685b647c" name="변경" comment="" />
+      <created>1708004552029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708004552029</updated>
+      <workItem from="1708004553230" duration="42386000" />
+      <workItem from="1709549217061" duration="1035000" />
+      <workItem from="1709550294356" duration="38846000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kyh/heera/member/MemoryMemberRepository.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/kyh/heera/autowired/AutowiredTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
