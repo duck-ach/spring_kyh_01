@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-// /front-controller/v1/* 하위로 들어오는 호출은 모두 이 컨트롤러로 들어옴
+// /front-controller/v2/* 하위로 들어오는 호출은 모두 이 컨트롤러로 들어옴
 @WebServlet(name = "frontControllerServletV2", urlPatterns = "/front-controller/v2/*")
 public class FrontControllerServletV2 extends HttpServlet {
 
@@ -42,6 +42,7 @@ public class FrontControllerServletV2 extends HttpServlet {
         // 잘 조회가 됐다 == controller 에 request, response 담아서 호출
         controller.process(request, response);
 
+        // MyView 호출하여 화면에 request 와 response 를 담아 rendering
         MyView view = controller.process(request, response);
         view.render(request, response);
 
